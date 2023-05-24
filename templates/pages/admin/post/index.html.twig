@@ -1,0 +1,29 @@
+{% extends "themes/base_admin.html.twig" %}
+
+{% block title %}Liste des posts{% endblock %}
+
+{% block main %}
+    <h1 class="text-center my-3 display-5">Liste des posts</h1>
+
+    <div class="d-flex justify-content-end align-items-center my-3">
+        <a class="btn btn-primary" href="{{ path('admin.post.create') }}">Nouveau post</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-stripped table-hover texte-center">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Slug</th>
+                    <th>Content</th>
+                    <th>Image</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

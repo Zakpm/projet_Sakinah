@@ -1,2 +1,11 @@
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
+
+// Abstracts
+@import "abstracts/variables";
+
+// Base
+@import "base/typography";
+
+// Layout
+@import "layout/body/body_visitor";
