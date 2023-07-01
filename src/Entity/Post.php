@@ -48,7 +48,7 @@ class Post
 
 
 
-    #[ORM\Column]
+    #[ORM\Column(options: array("default" => false))]
     private ?bool $isPublished = null;
 
 
@@ -66,6 +66,12 @@ class Post
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $published_at = null;
 
+
+    public function __construct()
+    {
+        $this->isPublished = false;
+    }
+
     
 
     public function getId(): ?int
@@ -78,7 +84,7 @@ class Post
         return $this->title;
     }
 
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
 

@@ -1,9 +1,9 @@
 {% extends "themes/base_admin.html.twig" %}
 
-{% block title %}Nouveau post{% endblock %}
+{% block title %}Modifier le post : {{post.title}} {% endblock %}
 
 {% block main %}
-    <h1 class="text-center my-3 display-5">Nouveau post</h1>
+    <h1 class="text-center my-3 display-5">Modifier le post : {{ post.title }} </h1>
 
     <div class="container mt-5">
         {{form_start(form)}}
